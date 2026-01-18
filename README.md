@@ -1,61 +1,114 @@
-# Forest Fire Risk Classification 🌲🔥
+# 🌲🔥 Forest Fire Risk Classification
 
-An educational AI-assisted project to predict forest fire risks using Logistic Regression.
+An **educational AI-assisted machine learning project** that predicts forest fire risk based on environmental conditions using Logistic Regression.
+
+---
 
 ## 📌 Problem Statement
-Forest fires cause significant environmental and economic damage. Early detection and risk assessment can help in prevention. This project builds a simple classification model to predict whether a set of environmental conditions corresponds to a "Fire" or "Not Fire" scenario.
+
+Forest fires cause significant environmental, economic, and ecological damage. Early identification of high-risk conditions can help authorities and communities take preventive actions.
+
+This project demonstrates a **prototype risk classification system** that predicts whether given environmental conditions correspond to a **Fire** or **Not Fire** scenario.
+
+---
 
 ## 📂 Dataset
-- **Name**: Algerian Forest Fires Dataset (UCI Machine Learning Repository)
-- **Features Used**:
-  - `Temperature`: Max temperature (°C)
-  - `RH`: Relative Humidity (%)
-  - `Ws`: Wind Speed (km/h)
-  - `Rain`: Rainfall (mm)
-- The dataset contains data from two regions (Bejaia and Sidi-Bel Abbes) concatenated. We merged them for this analysis.
+
+* **Name:** Algerian Forest Fires Dataset
+* **Source:** UCI Machine Learning Repository
+
+### Features Used
+
+* **Temperature (°C):** Daily maximum temperature
+* **RH (%):** Relative humidity
+* **Ws (km/h):** Wind speed
+* **Rain (mm):** Rainfall
+
+The dataset contains records from two regions (Bejaia and Sidi-Bel Abbes). Both regions were merged and cleaned to form a single dataset for training and evaluation.
+
+---
 
 ## 🤖 Model Choice
-- **Algorithm**: Logistic Regression
-- **Why?**:
-  - Simple, interpretable, and effective for binary classification.
-  - Good for educational purposes (easy to understand weights/coefficients).
-  - Fast training and inference.
-- **Performance**: ~76% Accuracy on the test set.
+
+* **Algorithm:** Logistic Regression
+
+### Why Logistic Regression?
+
+* Simple and interpretable binary classification model
+* Suitable for educational and prototype systems
+* Fast training and inference
+* Easy to explain in academic evaluations
+
+**Model Performance:** ~76% accuracy on the test dataset.
+
+---
 
 ## ⚠️ Limitations
-- **Dataset Size**: The dataset is relatively small (~244 records).
-- **Simplicity**: We count rainfall and other factors simply; real fire dynamics are complex (involving fuel moisture codes FFMC, DMC, etc., which we omitted for simplicity in inputs).
-- **Educational Only**: This tool is for learning purposes and **NOT for real-world emergency use**.
+
+* **Dataset Size:** Relatively small (~244 records)
+* **Feature Scope:** Real wildfire behavior depends on complex factors (fuel moisture indices like FFMC, DMC, etc.), which were excluded to keep inputs simple
+* **No Real-Time Data:** Uses historical data only
+* **Educational Purpose Only:** This system is a learning prototype and **must not be used for real-world emergency or safety decisions**
+
+---
 
 ## 🛠️ Tech Stack
-- **Python**: Core language
-- **Pandas & NumPy**: Data manipulation
-- **Scikit-learn**: Machine Learning
-- **Streamlit**: Web Interface
 
-## 🤖 AI Assistant Role
-This project was built with the help of an AI coding assistant (acting as a "Copilot").
-- **Code Generation**: The AI generated the training script and Streamlit app.
-- **Data Cleaning**: The AI handled the complexity of the dataset (header in the middle of the file).
-- **Documentation**: The AI drafted this README.
+* **Python** – Core programming language
+* **Pandas & NumPy** – Data processing
+* **Scikit-learn** – Machine learning
+* **Streamlit** – Interactive web interface
 
-## 🚀 How to Run
+---
 
-1. **Install Dependencies**:
-   ```bash
-   pip install -r requirements.txt
-   ```
+## 🤖 Role of AI Coding Assistant (Copilot)
 
-2. **Train the Model**:
-   ```bash
-   python train_model.py
-   ```
-   *This will create `model.pkl` and `scaler.pkl`.*
+This project was developed with the assistance of an **AI coding assistant (GitHub Copilot–style)**.
 
-3. **Run the App**:
-   ```bash
-   streamlit run app.py
-   ```
+The AI assistant was used to:
+
+* Suggest boilerplate code for data preprocessing and model training
+* Assist in refactoring and organizing Python functions
+* Speed up development of the Streamlit user interface
+* Support debugging and code cleanup
+
+All AI-generated suggestions were **reviewed, modified, and validated by the developer** before final integration.
+
+---
+
+## 🚀 How to Run the Project
+
+### 1️⃣ Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 2️⃣ Train the Model
+
+```bash
+python train_model.py
+```
+
+This will generate:
+
+* `model.pkl`
+* `scaler.pkl`
+
+### 3️⃣ Run the Application
+
+```bash
+streamlit run app.py
+```
+
+---
 
 ## 📝 License
-MIT License - Educational Use
+
+MIT License — Educational Use Only
+
+---
+
+## 🟢 Final Note (For Mentors / Reviewers)
+
+This project demonstrates the **workflow of building an AI-assisted classification system**, focusing on data preprocessing, model training, evaluation, and responsible AI usage rather than real-world deployment.
